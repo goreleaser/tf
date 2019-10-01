@@ -49,3 +49,8 @@ resource "github_team_membership" "everyone_mgrachev" {
   team_id  = github_team.everyone.id
   username = data.github_user.mgrachev.login
 }
+
+resource "github_team_membership" "everyone_carinebecker" {
+  team_id  = github_team.everyone.id
+  username = data.github_user.carinebecker.login
+}

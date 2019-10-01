@@ -6,12 +6,13 @@ resource "github_repository" "tf" {
 }
 
 resource "github_branch_protection" "tf" {
-  repository     = "${github_repository.tf.name}"
-  branch         = "master"
-  enforce_admins = true
+  repository             = "${github_repository.tf.name}"
+  branch                 = "master"
+  enforce_admins         = true
+  require_signed_commits = true
 
   required_status_checks {
-    strict   = false
+    strict   = true
     contexts = ["atlas/goreleaser/tf"]
   }
 }

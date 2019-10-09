@@ -37,3 +37,7 @@ data "github_user" "mgrachev" {
 data "github_user" "carinebecker" {
   username = "carinebecker"
 }
+
+data "github_user" "djgilcrease" {
+  username = "djgilcrease"
+}
